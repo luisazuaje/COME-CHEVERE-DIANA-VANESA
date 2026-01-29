@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come Chevere - Catering Integral & Repostería Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'crema': '#F8F4E9',
+                        'terracota': '#C47B5A',
+                        'oliva': '#8A9A5B',
+                        'vino': '#7D2E3D',
+                        'dorado': '#C6A769',
+                        'gris-elegante': '#5D5D5D',
+                        'blanco-roto': '#FAF8F2',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Lora', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'texture-paper': "url('data:image/svg+xml,%3Csvg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\" fill=\"%23f0ede6\" fill-opacity=\"0.4\" fill-rule=\"evenodd\"/%3E%3C/svg%3E')",
+                        'olive-pattern': "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"%3E%3Cpath d=\"M61.82 18C58.12 12.84 52.28 10 46 10c-8.84 0-16 7.16-16 16 0 3.36 1.04 6.48 2.82 9.08C26.48 39.84 22 47.16 22 55.5c0 9.4 7.6 17 17 17s17-7.6 17-17c0-3.36-1.04-6.48-2.82-9.08C57.52 36.16 62 28.84 62 20.5c0-1.1-.06-2.18-.18-2.5zM40 70c-7.72 0-14-6.28-14-14 0-5.96 3.76-11.06 9-13.08.4 4.26 2.96 7.96 6.64 10.08-2.44 3.4-3.64 7.48-3.64 11.5 0 4.02 1.2 8.1 3.64 11.5-2.68 2.12-4.24 5.82-4.24 9.5 0 6.62 5.38 12 12 12s12-5.38 12-12c0-3.68-1.56-7.38-4.24-9.5 2.44-3.4 3.64-7.48 3.64-11.5 0-4.02-1.2-8.1-3.64-11.5 3.68-2.12 6.24-5.82 6.64-10.08 5.24 2.02 9 7.12 9 13.08 0 7.72-6.28 14-14 14z\" fill=\"%238A9A5B\" fill-opacity=\"0.15\"/%3E%3C/svg%3E')",
+                    },
+                    boxShadow: {
+                        'elegante': '0 10px 40px rgba(0, 0, 0, 0.08)',
+                        'suave': '0 5px 15px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background-color: #C47B5A;
+            bottom: -8px;
+            left: 20%;
+        }
+
+        .menu-item-hover {
+            transition: all 0.3s ease;
+        }
+
+        .menu-item-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #C47B5A 0%, #7D2E3D 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7D2E3D 0%, #C47B5A 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(125, 46, 61, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-crema font-sans text-gris-elegante">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-4 shadow-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-terracota flex items-center justify-center">
+                    <i class="fas fa-utensils text-white text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="font-display text-2xl font-bold text-vino">Come Chevere</h1>
+                    <p class="text-xs text-oliva">Catering Integral</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium">Inicio</a>
+                <a href="#chef" class="text-gris-elegante hover:text-terracota transition-colors font-medium">La
+                    Chef</a>
+                <a href="#reposteria"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium">Repostería</a>
+                <a href="#catering"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium">Catering</a>
+                <a href="#galeria"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium">Galería</a>
+                <a href="#contacto"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium">Contacto</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-vino">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute w-full left-0 top-full py-4 shadow-lg">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#inicio"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">Inicio</a>
+                <a href="#chef" class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">La
+                    Chef</a>
+                <a href="#reposteria"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">Repostería</a>
+                <a href="#catering"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">Catering</a>
+                <a href="#galeria"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">Galería</a>
+                <a href="#contacto"
+                    class="text-gris-elegante hover:text-terracota transition-colors font-medium py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio"
+        class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden bg-gradient-to-b from-blanco-roto to-crema">
+        <!-- Decoración fondo -->
+        <div class="absolute inset-0 bg-texture-paper opacity-20"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 rounded-full bg-terracota/5"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-oliva/5"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="inline-flex items-center px-4 py-2 bg-terracota/10 rounded-full mb-6">
+                        <span class="text-terracota font-medium">Catering Integral & Repostería Artesanal</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        <span class="text-vino">Come Chevere</span><br>
+                        <span class="text-gris-elegante">Transforma tu evento</span><br>
+                        <span class="text-terracota">en una experiencia completa</span>
+                    </h1>
+
+                    <p class="text-lg text-gris-elegante mb-8 max-w-lg">
+                        Postres de artista, platos con alma y gestión total para que solo te preocupes por disfrutar.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto"
+                            class="btn-primary text-white font-bold py-3 px-8 rounded-full inline-flex items-center justify-center">
+                            <i class="fas fa-calendar-check mr-2"></i> Diseña tu Menú Ideal
+                        </a>
+                        <a href="#galeria"
+                            class="border-2 border-terracota text-terracota font-bold py-3 px-8 rounded-full inline-flex items-center justify-center hover:bg-terracota/5 transition-colors">
+                            <i class="fas fa-images mr-2"></i> Ver Galería de Creaciones
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative fade-in">
+                    <div class="relative rounded-3xl overflow-hidden shadow-elegante">
+                        <!-- Imagen representativa - en producción sería una foto real -->
+                        <div
+                            class="aspect-[4/5] bg-gradient-to-br from-terracota/20 to-oliva/20 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <div
+                                    class="w-24 h-24 rounded-full bg-white/80 flex items-center justify-center mx-auto mb-6 shadow-suave">
+                                    <i class="fas fa-cake-candles text-4xl text-terracota"></i>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-vino mb-2">Imagen del servicio</h3>
+                                <p class="text-gris-elegante">Presentación elegante de catering integral</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elementos decorativos flotantes -->
+                    <div
+                        class="absolute -top-6 -left-6 w-20 h-20 bg-oliva/10 rounded-full flex items-center justify-center floating">
+                        <i class="fas fa-leaf text-oliva text-2xl"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-terracota/10 rounded-full flex items-center justify-center floating"
+                        style="animation-delay: 1s;">
+                        <i class="fas fa-wine-glass-alt text-terracota text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección La Chef -->
+    <section id="chef" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative fade-in">
+                    <div class="rounded-3xl overflow-hidden shadow-elegante">
+                        <!-- Imagen chef - en producción sería una foto real -->
+                        <div
+                            class="aspect-[4/5] bg-gradient-to-tr from-crema to-terracota/10 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <div
+                                    class="w-32 h-32 rounded-full bg-white/90 flex items-center justify-center mx-auto mb-6 shadow-elegante">
+                                    <i class="fas fa-user-chef text-5xl text-terracota"></i>
+                                </div>
+                                <h3 class="font-display text-3xl font-bold text-vino mb-2">Nuestra Chef</h3>
+                                <p class="text-gris-elegante italic">"Con alma de artista y precisión de chef"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -right-4 bg-vino text-white p-4 rounded-2xl shadow-elegante max-w-xs">
+                        <p class="font-body italic">"No creo solo menús, creo la atmósfera perfecta para tu momento
+                            especial."</p>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <h2 class="section-title font-display text-3xl md:text-4xl font-bold mb-6 text-vino">Tu Aliada
+                        Culinaria en Guacara</h2>
+
+                    <p class="text-lg text-gris-elegante mb-6 leading-relaxed">
+                        En el corazón de Guacara, Carabobo, una chef repostera con alma de artista ha creado <span
+                            class="font-bold text-terracota">"Come Chevere"</span>. Con años de trayectoria, combina
+                        precisión técnica, sensibilidad culinaria y una obsesión por el detalle.
+                    </p>
+
+                    <p class="text-lg text-gris-elegante mb-8 leading-relaxed">
+                        Su filosofía se basa en escuchar primero: cada evento comienza con una conversación profunda
+                        para captar la esencia de tu celebración y traducirla en sabores.
+                    </p>
+
+                    <div class="bg-crema/50 rounded-2xl p-6 border-l-4 border-oliva">
+                        <div class="flex items-start">
+                            <i class="fas fa-star text-dorado text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-vino text-lg mb-2">Experiencia y Pasión</h4>
+                                <p class="text-gris-elegante">Años de experiencia en repostería artesanal y catering de
+                                    eventos de alta gama.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Repostería -->
+    <section id="reposteria" class="py-16 md:py-24 bg-gradient-to-b from-white to-crema/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title font-display text-3xl md:text-4xl font-bold mb-6 text-vino">Postres que Son
+                    Obras de Arte</h2>
+                <p class="text-xl text-gris-elegante max-w-3xl mx-auto">
+                    Como experta repostera, dominamos el "Top 10" de la pastelería mundial, garantizando autenticidad,
+                    sabor perfecto y una presentación impecable.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tortas -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-suave hover:shadow-elegante transition-all duration-300 fade-in menu-item-hover">
+                    <div class="h-48 bg-gradient-to-r from-terracota/10 to-vino/10 flex items-center justify-center">
+                        <i class="fas fa-birthday-cake text-6xl text-terracota"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-dorado/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-crown text-dorado"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-vino">Tortas Enteras Personalizadas</h3>
+                        </div>
+                        <p class="text-gris-elegante mb-6">
+                            Desde el clásico y húmedo Terciopelo Rojo hasta la intensidad de un Devil's Food Cake de
+                            chocolate, pasando por el ícono latino de la Tres Leches.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-oliva mr-2"></i>
+                                <span>Red Velvet húmedo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-oliva mr-2"></i>
+                                <span>Devil's Food Cake intenso</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-oliva mr-2"></i>
+                                <span>Tres Leches cremoso</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Postres por Porción -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-suave hover:shadow-elegante transition-all duration-300 fade-in menu-item-hover"
+                    style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-gradient-to-r from-oliva/10 to-dorado/10 flex items-center justify-center">
+                        <i class="fas fa-cheese text-6xl text-oliva"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-terracota/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-terracota"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-vino">Postres por Porción</h3>
+                        </div>
+                        <p class="text-gris-elegante mb-6">
+                            Elegantes Cheesecakes de frutos rojos, reconfortantes Tiramisú o el contraste perfecto de un
+                            Brownie con helado.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-terracota mr-2"></i>
+                                <span>Cheesecake de frutos rojos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-terracota mr-2"></i>
+                                <span>Tiramisú clásico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-terracota mr-2"></i>
+                                <span>Brownie con helado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tradición -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-suave hover:shadow-elegante transition-all duration-300 fade-in menu-item-hover"
+                    style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-gradient-to-r from-dorado/10 to-crema flex items-center justify-center">
+                        <i class="fas fa-cookie-bite text-6xl text-dorado"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-vino/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-heart text-vino"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-vino">Creaciones Tradicionales</h3>
+                        </div>
+                        <p class="text-gris-elegante mb-6">
+                            Quesillos, biscochos exquisitos y todas aquellas recetas que son sinónimo de celebración y
+                            tradición familiar.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-vino mr-2"></i>
+                                <span>Quesillos cremosos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-vino mr-2"></i>
+                                <span>Biscochos artesanales</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-vino mr-2"></i>
+                                <span>Postres de la abuela</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Catering -->
+    <section id="catering" class="py-16 md:py-24 bg-gradient-to-b from-crema/50 to-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-olive-pattern opacity-10"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title font-display text-3xl md:text-4xl font-bold mb-6 text-vino">Más que Postres:
+                    Solución Culinaria Total</h2>
+                <p class="text-xl text-gris-elegante max-w-3xl mx-auto">
+                    "Come Chevere" es sinónimo de paz mental. Nos encargamos de todo el viaje gastronómico, desde los
+                    pasapalos hasta el último postre.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in">
+                    <div class="bg-white rounded-3xl p-8 shadow-elegante">
+                        <h3 class="font-display text-2xl font-bold text-vino mb-6 flex items-center">
+                            <i class="fas fa-utensils mr-3 text-terracota"></i> Cocina Contemporánea
+                        </h3>
+                        <p class="text-gris-elegante mb-6">
+                            Menú sofisticado de corte <span class="font-bold text-terracota">mediterráneo/italiano
+                                contemporáneo</span>, diseñado para complementar perfectamente nuestra dulce expertise.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-circle text-terracota text-xs mt-2 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Pasapalos & Entradas</h4>
+                                    <p class="text-gris-elegante">Bruschettas clásicas, Carpaccio de Res, Canapés
+                                        gourmet</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-circle text-oliva text-xs mt-2 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Platos Principales</h4>
+                                    <p class="text-gris-elegante">Solomillo a la Pimienta, Salmón a la Plancha, Risottos
+                                        cremosos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-circle text-dorado text-xs mt-2 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Especialidades Italianas</h4>
+                                    <p class="text-gris-elegante">Fettuccine Alfredo, Lasagna Bolognesa, Antipastos
+                                        frescos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <div class="bg-white rounded-3xl p-8 shadow-elegante">
+                        <h3 class="font-display text-2xl font-bold text-vino mb-6 flex items-center">
+                            <i class="fas fa-wine-glass-alt mr-3 text-oliva"></i> Gestión Total
+                        </h3>
+                        <p class="text-gris-elegante mb-6">
+                            Coordinamos <span class="font-bold text-oliva">bebidas y todos los insumos</span>. Tú
+                            delegas, nosotros lo hacemos realidad.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-wine-bottle text-vino text-lg mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Bebidas Seleccionadas</h4>
+                                    <p class="text-gris-elegante">Cócteles signature, vinos de calidad, limonadas
+                                        artesanales</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clipboard-check text-terracota text-lg mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Planificación Integral</h4>
+                                    <p class="text-gris-elegante">Desde el menú hasta la presentación y servicio</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-concierge-bell text-dorado text-lg mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante">Servicio Completo</h4>
+                                    <p class="text-gris-elegante">Personal capacitado para atender cada detalle de tu
+                                        evento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center fade-in" style="animation-delay: 0.4s;">
+                <a href="#contacto"
+                    class="btn-primary text-white font-bold py-4 px-10 rounded-full inline-flex items-center justify-center text-lg">
+                    <i class="fas fa-calendar-alt mr-3"></i> Solicitar Propuesta Personalizada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title font-display text-3xl md:text-4xl font-bold mb-6 text-vino">Una Mirada a
+                    Nuestro Arte</h2>
+                <p class="text-xl text-gris-elegante max-w-3xl mx-auto">
+                    No necesitas más que verlo para enamorarte de nuestras creaciones.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Imagen 1 -->
+                <div class="col-span-2 row-span-2 fade-in">
+                    <div
+                        class="h-80 md:h-96 rounded-2xl bg-gradient-to-br from-terracota/20 to-vino/20 flex items-center justify-center shadow-suave">
+                        <div class="text-center p-6">
+                            <i class="fas fa-cake text-5xl text-terracota mb-4"></i>
+                            <h4 class="font-display text-xl font-bold text-vino">Tortas Personalizadas</h4>
+                            <p class="text-gris-elegante mt-2">Diseños únicos para momentos especiales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="fade-in" style="animation-delay: 0.1s;">
+                    <div
+                        class="h-40 rounded-2xl bg-gradient-to-tr from-oliva/20 to-dorado/20 flex items-center justify-center shadow-suave">
+                        <div class="text-center p-4">
+                            <i class="fas fa-cheese text-3xl text-oliva"></i>
+                            <p class="font-medium text-gris-elegante mt-2">Postres Individuales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <div
+                        class="h-40 rounded-2xl bg-gradient-to-tr from-dorado/20 to-crema flex items-center justify-center shadow-suave">
+                        <div class="text-center p-4">
+                            <i class="fas fa-bread-slice text-3xl text-dorado"></i>
+                            <p class="font-medium text-gris-elegante mt-2">Pasapalos Gourmet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 4 -->
+                <div class="fade-in" style="animation-delay: 0.3s;">
+                    <div
+                        class="h-40 rounded-2xl bg-gradient-to-tr from-vino/20 to-terracota/20 flex items-center justify-center shadow-suave">
+                        <div class="text-center p-4">
+                            <i class="fas fa-wine-glass text-3xl text-vino"></i>
+                            <p class="font-medium text-gris-elegante mt-2">Mesas de Postres</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 5 -->
+                <div class="fade-in" style="animation-delay: 0.4s;">
+                    <div
+                        class="h-40 rounded-2xl bg-gradient-to-tr from-crema to-oliva/10 flex items-center justify-center shadow-suave">
+                        <div class="text-center p-4">
+                            <i class="fas fa-pasta text-3xl text-oliva"></i>
+                            <p class="font-medium text-gris-elegante mt-2">Platos Principales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 6 -->
+                <div class="col-span-2 fade-in" style="animation-delay: 0.5s;">
+                    <div
+                        class="h-40 rounded-2xl bg-gradient-to-r from-dorado/20 to-terracota/20 flex items-center justify-center shadow-suave">
+                        <div class="text-center p-6">
+                            <i class="fas fa-glass-cheers text-4xl text-dorado mb-2"></i>
+                            <h4 class="font-display text-xl font-bold text-vino">Eventos Completos</h4>
+                            <p class="text-gris-elegante mt-1">Catering integral para bodas, cumpleaños y eventos
+                                corporativos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estilo Come Chevere -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-crema to-blanco-roto">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div class="inline-flex items-center px-4 py-2 bg-terracota/10 rounded-full mb-6">
+                    <i class="fas fa-palette text-terracota mr-2"></i>
+                    <span class="text-terracota font-medium">Nuestro Estilo</span>
+                </div>
+
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-vino">Elegancia, Profesionalismo y un
+                    Toque de Alma</h2>
+
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-suave mb-8">
+                    <p class="text-xl text-gris-elegante leading-relaxed mb-8">
+                        Nuestro sello es un estilo <span class="font-bold text-terracota">limpio, profesional y con una
+                            elegancia femenina distintiva</span>. Cada plato y postre es una composición donde el color,
+                        la textura y el equilibrio son cuidados con esmero.
+                    </p>
+
+                    <p class="text-xl text-gris-elegante leading-relaxed">
+                        Creemos que la presentación es la primera promesa de un sabor excepcional. Trabajamos para
+                        sorprender a tus invitados y, sobre todo, para regalarte <span
+                            class="font-bold text-oliva">tranquilidad absoluta</span>.
+                    </p>
+                </div>
+
+                <div class="text-2xl font-display font-bold text-vino italic">
+                    "Transformamos tu evento en una experiencia gastronómica chevere, completa e inolvidable."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title font-display text-3xl md:text-4xl font-bold mb-6 text-vino">Cuéntanos tu
+                    Celebración</h2>
+                <p class="text-xl text-gris-elegante max-w-3xl mx-auto">
+                    Creamos juntos el menú perfecto para tu evento especial.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <div class="bg-crema rounded-3xl p-8 shadow-suave h-full">
+                        <h3 class="font-display text-2xl font-bold text-vino mb-6 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-terracota"></i> Nuestra Ubicación
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-terracota/10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-location-dot text-terracota"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante text-lg">Guacara, Carabobo</h4>
+                                    <p class="text-gris-elegante">Servicios en toda la región central de Venezuela</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-oliva/10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-oliva"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante text-lg">Teléfono</h4>
+                                    <p class="text-gris-elegante">+58 424-1234567</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-dorado/10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-dorado"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante text-lg">Email</h4>
+                                    <p class="text-gris-elegante">info@comechevere.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-vino/10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-bullseye text-vino"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gris-elegante text-lg">Misión</h4>
+                                    <p class="text-gris-elegante">Ofrecer un servicio culinario personalizado y de
+                                        calidad excepcional, gestionando todos los detalles para que tu única tarea sea
+                                        disfrutar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-crema">
+                            <h4 class="font-bold text-gris-elegante text-lg mb-4">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-terracota/10 flex items-center justify-center text-terracota hover:bg-terracota hover:text-white transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-oliva/10 flex items-center justify-center text-oliva hover:bg-oliva hover:text-white transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-dorado/10 flex items-center justify-center text-dorado hover:bg-dorado hover:text-white transition-colors">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <div class="bg-white rounded-3xl p-8 shadow-elegante border border-crema">
+                        <h3 class="font-display text-2xl font-bold text-vino mb-6">Consultoría Gastronómica
+                            Personalizada</h3>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gris-elegante font-medium mb-2">Nombre</label>
+                                    <input type="text" required
+                                        class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50">
+                                </div>
+                                <div>
+                                    <label class="block text-gris-elegante font-medium mb-2">Teléfono</label>
+                                    <input type="tel" required
+                                        class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gris-elegante font-medium mb-2">Correo Electrónico</label>
+                                <input type="email" required
+                                    class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50">
+                            </div>
+
+                            <div>
+                                <label class="block text-gris-elegante font-medium mb-2">Tipo de Evento</label>
+                                <select
+                                    class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50">
+                                    <option>Boda</option>
+                                    <option>Cumpleaños</option>
+                                    <option>Evento Corporativo</option>
+                                    <option>Aniversario</option>
+                                    <option>Bautizo</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-gris-elegante font-medium mb-2">Fecha Estimada</label>
+                                <input type="date"
+                                    class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50">
+                            </div>
+
+                            <div>
+                                <label class="block text-gris-elegante font-medium mb-2">Describe tu visión o
+                                    inquietudes</label>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-3 bg-crema/50 border border-crema rounded-lg focus:outline-none focus:ring-2 focus:ring-terracota/50"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="btn-primary text-white font-bold py-4 px-8 rounded-full w-full">
+                                <i class="fas fa-calendar-check mr-2"></i> Agendar Consulta Personalizada Gratuita
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-vino text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-crema flex items-center justify-center">
+                            <i class="fas fa-utensils text-vino text-lg"></i>
+                        </div>
+                        <div>
+                            <h1 class="font-display text-2xl font-bold">Come Chevere</h1>
+                            <p class="text-crema/80 text-sm">El toque dulce y salado que transforma tu evento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+                    <a href="#inicio" class="text-crema/90 hover:text-white transition-colors">Inicio</a>
+                    <a href="#chef" class="text-crema/90 hover:text-white transition-colors">La Chef</a>
+                    <a href="#reposteria" class="text-crema/90 hover:text-white transition-colors">Repostería</a>
+                    <a href="#catering" class="text-crema/90 hover:text-white transition-colors">Catering</a>
+                    <a href="#galeria" class="text-crema/90 hover:text-white transition-colors">Galería</a>
+                    <a href="#contacto" class="text-crema/90 hover:text-white transition-colors">Contacto</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-crema/80">Guacara, Estado Carabobo, Venezuela</p>
+                    <p class="text-crema/80 text-sm mt-2">© 2023 Come Chevere. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Animaciones al hacer scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        // Verificar al cargar y al hacer scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+
+        // Formulario de contacto
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validación simple
+            const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border', 'border-red-500');
+                } else {
+                    input.classList.remove('border', 'border-red-500');
+                }
+            });
+
+            if (isValid) {
+                // Simular envío
+                alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto para crear el menú perfecto para tu evento.');
+                contactForm.reset();
+            } else {
+                alert('Por favor, completa todos los campos requeridos.');
+            }
+        });
+
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
